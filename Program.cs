@@ -9,7 +9,7 @@ foreach (string line in File.ReadLines("./texto.txt"))
 
     counter++;
     string[] palavras = line.Split('|');
-    if (palavras[0] == "GATO" && int.Parse(palavras[2]) < 5)
+    if (palavras[0] == "GATO" && int.Parse(palavras[2]) < 5 && int.Parse(palavras[2]) > 0)
     {
         Dictionary<string, int> gatos = new Dictionary<string, int>();
         gatos.Add(palavras[0],  int.Parse(palavras[2]));
@@ -17,7 +17,7 @@ foreach (string line in File.ReadLines("./texto.txt"))
         {
             Console.WriteLine("{" + "Animal: " + gato.Key + "," + " Idade: " + gato.Value + "}");
         }
-    } else if (palavras[0] == "CACHORRO" && int.Parse(palavras[2]) < 100)
+    } else if (palavras[0] == "CACHORRO" && int.Parse(palavras[2]) < 100 && int.Parse(palavras[2]) > 0)
         {
             Dictionary<string, int> cachorros = new Dictionary<string, int>();
             cachorros.Add(palavras[0], int.Parse(palavras[2]));
