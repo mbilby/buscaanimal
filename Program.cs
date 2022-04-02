@@ -2,11 +2,9 @@
 
 // See https://aka.ms/new-console-template for more information
 int counter = 0;
-
 // Read the file and display it line by line.  
 foreach (string line in File.ReadLines("./texto.txt"))
 {
-
     counter++;
     string[] palavras = line.Split('|');
     if (palavras[0] == "GATO" && int.Parse(palavras[2]) < 5 && int.Parse(palavras[2]) > 0)
@@ -26,8 +24,5 @@ foreach (string line in File.ReadLines("./texto.txt"))
               Console.WriteLine("{" + "Animal: " + cachorro.Key + "," + " Idade: " + cachorro.Value + "}");
             }
         }
-    
-    
-
 }
 
