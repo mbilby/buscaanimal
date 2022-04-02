@@ -23,7 +23,7 @@ foreach (string line in File.ReadLines("./texto.txt"))
             cachorros.Add(palavras[0], int.Parse(palavras[2]));
             foreach (KeyValuePair<string, int> cachorro in cachorros)
             {
-                Console.WriteLine("{" + "Animal: " + cachorro.Key + "," + " Idade: " + cachorro.Value + "}");
+              Console.WriteLine("{" + "Animal: " + cachorro.Key + "," + " Idade: " + cachorro.Value + "}");
             }
         }
     
